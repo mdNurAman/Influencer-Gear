@@ -21,7 +21,8 @@
   margin: 0;
   padding: 0;
 }
-main,header {
+main,
+header {
   max-width: 90%;
   margin: 0 auto;
   /* background-color: burlywood; */
@@ -111,75 +112,128 @@ li {
   border-bottom: 1px solid rgba(128, 128, 128, 0.283);
   display: flex;
   justify-content: space-around;
-  gap:15px;
+  gap: 15px;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 100px;
 }
+/* Collections */
+.collection {
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.collection-head {
+  text-align: center;
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.collection-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+}
+.card {
+  max-width: fit-content;
+  border: 1px solid rgba(128, 128, 128, 0.192);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card-title {
+  font-family: poppins;
+  font-size: 28px;
+  font-weight: 500;
+  color: #18191f;
+}
+.card-price {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+}
+.card-description {
+  max-width: 200px;
+  padding-top: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: bold;
+  color: #787885;
+}
+.fa-solid {
+  color: rgba(251, 130, 0, 1);
+  width: 11px;
+  height: 10px;
+  padding-right: 5px;
+}
 /* Feature Part */
-.feature-container{
+.feature-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:96px;
+  gap: 96px;
   margin-bottom: 100px;
 }
-.feature-title{
+.feature-title {
   font-family: poppins;
   font-size: 2.4rem;
   font-weight: bold;
-  color: #0A0826;
+  color: #0a0826;
   margin-bottom: 1rem;
 }
-.feature-subtitle{
+.feature-subtitle {
   max-width: 501px;
   font-family: poppins;
   font-size: 1rem;
   font-weight: bold;
-  color: #6C6C6C;
+  color: #6c6c6c;
   margin-bottom: 1rem;
 }
 
 /* Footer */
-footer{
-  background-color: #0A0826;
+footer {
+  background-color: #0a0826;
 }
-.footer-container{
+.footer-container {
   max-width: 260px;
   margin: 0 auto;
   padding: 50px;
 }
-.footer-title{
+.footer-title {
   font-family: poppins;
   font-size: 24px;
   font-weight: bold;
   color: white;
   text-align: center;
 }
-.footer-sub-title{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.footer-sub-title {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.838);
   text-align: center;
   margin-bottom: 15px;
 }
-.footer-icons{
+.footer-icons {
   padding: 10px;
   background-color: #f04483a8;
   border-radius: 10px;
   max-width: 120px;
-  margin:0 auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  
 }
-footer i{
+footer i {
   color: white;
 }
 /* Mobile Device */
 @media screen and (max-width: 576px) {
-  main,header {
+  main,
+  header {
     font-family: poppins;
     max-width: 98%;
     margin: 0 auto;
@@ -223,39 +277,43 @@ footer i{
     font-size: 1.8rem;
   }
   /* Market section*/
-  .market-container{
-    margin:40px auto;
+  .market-container {
+    margin: 40px auto;
     max-width: 76%;
     padding: 0;
     justify-content: space-around;
-    gap:10px;
+    gap: 10px;
   }
-  .market-container img{
+  .market-container img {
     max-width: 20%;
     height: auto;
   }
+  /* Collcection*/
+  .collection-container{
+    grid-template-columns: 1fr;
+  }
   /* Feature */
-  .feature-container{
+  .feature-container {
     max-width: 90%;
     margin: 0 auto;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    gap: 10px;
     margin-bottom: 50px;
   }
-  .feature-container img{
+  .feature-container img {
     width: 100%;
     height: auto;
   }
-  .feature-title{
+  .feature-title {
     font-size: 24px;
     text-align: center;
   }
-  .feature-subtitle{
+  .feature-subtitle {
     text-align: center;
   }
-  .feature-button{
+  .feature-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,7 +323,8 @@ footer i{
 
 /* Bigger */
 @media screen and (min-width: 576px) and (max-width: 830px) {
-  main,header {
+  main,
+  header {
     font-family: poppins;
     max-width: 90%;
     margin: 0 auto;
@@ -310,47 +369,57 @@ footer i{
     font-size: 2.5rem;
   }
   /* Market section*/
-  .market-container{
-    margin:40px auto;
+  .market-container {
+    margin: 40px auto;
     max-width: 76%;
     padding: 0;
     justify-content: space-around;
-    gap:15px;
+    gap: 15px;
   }
-  .market-container img{
+  .market-container img {
     max-width: 20%;
     height: auto;
   }
+  /* Collection  */
+  .collection-container{
+    grid-template-columns: 1fr;
+  }
   /* Feature */
-  .feature-container{
+  .feature-container {
     max-width: 90%;
     margin: 0 auto;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    gap: 10px;
     margin-bottom: 50px;
   }
-  .feature-container img{
+  .feature-container img {
     width: 100%;
     height: auto;
   }
-  .feature-title{
+  .feature-title {
     font-size: 40px;
     text-align: center;
   }
-  .sub-con{
+  .sub-con {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .feature-subtitle{
+  .feature-subtitle {
     text-align: center;
   }
-  .feature-button{
+  .feature-button {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 830px) and (max-width: 1050px) {
+  .collection-container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 100px;
   }
 }
